@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Memory Duo</title>
+  <script>
+    // Single Page App redirect trick for GitHub Pages / static hosts.
+    // Encodes the current path into a query param and redirects to the root.
+    // The root index.html decodes it and restores the real URL via history.replaceState.
+    var pathSegmentsToKeep = 1; // 1 for GitHub Pages project sites (e.g. /memory_duo_test/)
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body></body>
+</html>

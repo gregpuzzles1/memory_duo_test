@@ -45,13 +45,9 @@ class _MyAppState extends State<MyApp> {
         ),
         useMaterial3: true,
       ),
-      initialRoute: '/home',
+      initialRoute: '/',
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => HomePage(
-              isDarkMode: _themeMode == ThemeMode.dark,
-              onThemeToggle: _toggleTheme,
-            ),
-        '/home': (BuildContext context) => HomePage(
               isDarkMode: _themeMode == ThemeMode.dark,
               onThemeToggle: _toggleTheme,
             ),

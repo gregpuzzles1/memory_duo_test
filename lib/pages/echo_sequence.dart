@@ -19,7 +19,7 @@ class EchoSequencePage extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             tooltip: 'Memory Duo Home',
-            onPressed: () => Navigator.of(context).pushNamed('/home'),
+            onPressed: () => Navigator.of(context).pushNamed('/'),
             icon: const Icon(Icons.home_outlined),
           ),
           IconButton(
