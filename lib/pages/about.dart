@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EchoSequencePage extends StatelessWidget {
-  const EchoSequencePage({
+class AboutPage extends StatelessWidget {
+  const AboutPage({
     super.key,
     required this.isDarkMode,
     required this.onThemeToggle,
@@ -15,17 +15,12 @@ class EchoSequencePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Echo Sequence'),
+        title: const Text('About'),
         actions: <Widget>[
           IconButton(
             tooltip: 'Memory Duo Home',
             onPressed: () => Navigator.of(context).pushNamed('/home'),
             icon: const Icon(Icons.home_outlined),
-          ),
-          IconButton(
-            tooltip: 'About',
-            onPressed: () => Navigator.of(context).pushNamed('/about'),
-            icon: const Icon(Icons.info_outline),
           ),
           IconButton(
             tooltip: isDarkMode ? 'Switch to Day Mode' : 'Switch to Night Mode',
@@ -45,7 +40,7 @@ class EchoSequencePage extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
-            Text('Echo Sequence is coming soon!'),
+            Text('This page is coming soon!'),
           ],
         ),
       ),

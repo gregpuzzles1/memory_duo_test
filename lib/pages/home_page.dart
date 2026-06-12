@@ -21,6 +21,11 @@ class HomePage extends StatelessWidget {
         title: const Text('Welcome to Memory Duo'),
         actions: <Widget>[
           IconButton(
+            tooltip: 'About',
+            onPressed: () => Navigator.of(context).pushNamed('/about'),
+            icon: const Icon(Icons.info_outline),
+          ),
+          IconButton(
             tooltip: isDarkMode ? 'Switch to Day Mode' : 'Switch to Night Mode',
             onPressed: onThemeToggle,
             icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),

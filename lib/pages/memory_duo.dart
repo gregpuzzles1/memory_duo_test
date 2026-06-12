@@ -572,6 +572,11 @@ class _MemoryGamePageState extends State<MemoryGamePage>
             icon: const Icon(Icons.home_outlined),
           ),
           IconButton(
+            tooltip: 'About',
+            onPressed: () => Navigator.of(context).pushNamed('/about'),
+            icon: const Icon(Icons.info_outline),
+          ),
+          IconButton(
             tooltip: widget.isDarkMode ? 'Switch to Day Mode' : 'Switch to Night Mode',
             onPressed: widget.onThemeToggle,
             icon: Icon(widget.isDarkMode ? Icons.light_mode : Icons.dark_mode),
