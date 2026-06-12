@@ -37,6 +37,12 @@ jobs:
       - name: Build web
         run: flutter build web --release --base-href /memory_duo_test/
 
+      - name: Copy index.html for SPA routes
+        run: |
+          cp build/web/index.html build/web/game.html
+          cp build/web/index.html build/web/echo-sequence.html
+          cp build/web/index.html build/web/about.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
