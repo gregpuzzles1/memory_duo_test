@@ -35,7 +35,7 @@ jobs:
         run: flutter pub get
 
       - name: Build web
-        run: flutter build web --release --base-href /memory_duo_test/
+        run: flutter build web --release --wasm --base-href /memory_duo_test/
 
       - name: Copy index.html for SPA routes
         run: |
